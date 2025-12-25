@@ -1,0 +1,737 @@
+body,
+h1,
+p,
+table,
+th,
+td,
+input,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+/* Heading */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #555;
+}
+
+/* Navigation Styling */
+.nav {
+    margin-bottom: 20px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 10px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #34495e;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Subheading Styling */
+h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+}
+
+/* Form Styling */
+/* form {
+    /* margin-bottom: 20px; } */
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    max-height: 200px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    cursor: pointer;
+    margin: 0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.tombol {
+    background-color: #34495e;
+    color: #fff;
+    padding: 6px 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.tombol:hover {
+    background-color: #555;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #34495e;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.footer {
+    margin-top: 10px;
+    border-top: 1px solid #ebebeb;
+    padding: 10px;
+    text-align: center;
+    font-size: 75%;
+    font-style: italic;
+}
+
+/* ===== TAMBAHAN MINIMAL UNTUK FULLCALENDAR SAJA ===== */
+
+/* Calendar Container */
+#calendar {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Calendar minimum height */
+.fc {
+    min-height: 600px;
+}
+
+/* Calendar Event Styling */
+.fc-event {
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.fc-event-title {
+    font-weight: 600;
+}
+
+/* Event Colors by Bidang */
+.event-ai {
+    background-color: #4e73df !important;
+    border-color: #4e73df !important;
+    color: white !important;
+}
+
+.event-web {
+    background-color: #1cc88a !important;
+    border-color: #1cc88a !important;
+    color: white !important;
+}
+
+.event-mobile {
+    background-color: #36b9cc !important;
+    border-color: #36b9cc !important;
+    color: white !important;
+}
+
+.event-game {
+    background-color: #f6c23e !important;
+    border-color: #f6c23e !important;
+    color: #000 !important;
+}
+
+.event-network {
+    background-color: #e74a3b !important;
+    border-color: #e74a3b !important;
+    color: white !important;
+}
+
+.event-default {
+    background-color: #858796 !important;
+    border-color: #858796 !important;
+    color: white !important;
+}
+
+/* Toggle Button untuk Switch View */
+.view-toggle {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: flex-end;
+}
+
+.view-toggle .tombol {
+    padding: 8px 16px;
+}
+
+.view-toggle .tombol.active {
+    background-color: #555;
+}
+
+/* Legend Styling */
+.legend {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+}
+
+/* Modal Styling (Simple) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background-color: #34495e;
+    color: white;
+    padding: 15px;
+    margin: -30px -30px 20px -30px;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: white;
+}
+
+.modal-body table {
+    margin-top: 0;
+}
+
+.modal-body table th {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.modal-footer {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.close-modal {
+    background-color: #7f8c8d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .fc-header-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .view-toggle {
+        justify-content: center;
+    }
+
+    .legend {
+        justify-content: center;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 1000px;
+    }
+}
+
+.unscheduled-warning {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media print {
+    .unscheduled-warning {
+        display: none !important;
+    }
+}
+
+/* ============================================================================
+   JADWAL INDEX PAGE STYLES - ADDED
+   ============================================================================ */
+
+/* Alert Messages */
+.alert-success {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    margin-bottom: 20px !important;
+    border: 1px solid #c3e6cb !important;
+}
+
+.alert-warning {
+    background-color: #fff3cd !important;
+    color: #856404 !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    margin-bottom: 20px !important;
+    border: 1px solid #ffeaa7 !important;
+}
+
+.alert-error {
+    background-color: #f8d7da !important;
+    color: #721c24 !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    margin-bottom: 20px !important;
+    border: 1px solid #f5c6cb !important;
+}
+
+.alert-stats {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.alert-stats ul {
+    margin: 5px 0 0 20px !important;
+}
+
+.alert-debug {
+    color: #ff6b6b !important;
+    background: #fff !important;
+    padding: 8px !important;
+    margin-top: 5px !important;
+    border-radius: 3px !important;
+}
+
+/* Info Box */
+.info-box {
+    background-color: #d1ecf1 !important;
+    color: #0c5460 !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    margin: 20px 0 !important;
+    border: 1px solid #bee5eb !important;
+}
+
+.info-box ul {
+    margin: 10px 0 0 20px !important;
+}
+
+/* Button Actions */
+.button-actions {
+    margin-top: 10px !important;
+    display: flex !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+}
+
+.button-actions .tombol {
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+}
+
+.btn-print {
+    background-color: #f39c12 !important;
+}
+
+.btn-delete {
+    background-color: #e74a3b !important;
+}
+
+/* Unscheduled Warning */
+.unscheduled-warning {
+    background-color: #fff3cd !important;
+    color: #856404 !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    margin: 20px 0 !important;
+    border-left: 5px solid #ffc107 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    animation: fadeIn 0.5s ease !important;
+}
+
+.unscheduled-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 15px !important;
+}
+
+.unscheduled-header h3 {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.btn-toggle-detail {
+    padding: 8px 15px !important;
+    font-size: 14px !important;
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+.unscheduled-intro {
+    margin: 0 0 15px 0 !important;
+    line-height: 1.6 !important;
+}
+
+.detail-scroll-container {
+    max-height: 500px !important;
+    overflow-y: auto !important;
+    background: white !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+}
+
+.student-card {
+    background: #fffbf0 !important;
+    padding: 15px !important;
+    margin-bottom: 12px !important;
+    border-radius: 5px !important;
+    border-left: 4px solid #ff9800 !important;
+}
+
+.student-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 10px !important;
+}
+
+.student-name {
+    font-size: 16px !important;
+    color: #333 !important;
+}
+
+.student-nim {
+    color: #666 !important;
+    margin-left: 10px !important;
+    font-size: 14px !important;
+}
+
+.student-badge {
+    background: #4e73df !important;
+    color: white !important;
+    padding: 4px 10px !important;
+    border-radius: 12px !important;
+    font-size: 12px !important;
+}
+
+.student-title {
+    margin-bottom: 10px !important;
+    padding: 8px !important;
+    background: white !important;
+    border-radius: 3px !important;
+}
+
+.student-title i {
+    color: #4e73df !important;
+}
+
+.student-supervisors {
+    margin-bottom: 10px !important;
+    font-size: 13px !important;
+    color: #666 !important;
+}
+
+.student-reason {
+    background: #fff3cd !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+    margin-top: 10px !important;
+    border: 1px solid #ffeaa7 !important;
+}
+
+.student-reason-content {
+    display: flex !important;
+    align-items: start !important;
+    gap: 8px !important;
+}
+
+.student-reason-content i {
+    color: #856404 !important;
+    margin-top: 2px !important;
+    font-size: 14px !important;
+}
+
+.student-reason-text {
+    flex: 1 !important;
+}
+
+.student-reason-text strong {
+    color: #856404 !important;
+    font-size: 13px !important;
+}
+
+.student-reason-text p {
+    margin: 5px 0 0 0 !important;
+    color: #856404 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+}
+
+.suggestions-box {
+    background: #e3f2fd !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    border-left: 4px solid #2196f3 !important;
+}
+
+.suggestions-box strong {
+    color: #1565c0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.suggestions-box ul {
+    margin: 0 !important;
+    padding-left: 20px !important;
+    line-height: 1.8 !important;
+    color: #1565c0 !important;
+}
+
+.quick-summary {
+    margin-top: 15px !important;
+    padding: 12px !important;
+    background: rgba(255, 255, 255, 0.7) !important;
+    border-radius: 5px !important;
+    font-size: 13px !important;
+}
+
+.summary-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 10px !important;
+    margin-top: 8px !important;
+}
+
+.summary-item {
+    padding: 8px !important;
+    background: white !important;
+    border-radius: 4px !important;
+    border-left: 3px solid #ff9800 !important;
+}
+
+.empty-state {
+    text-align: center !important;
+    padding: 40px 20px !important;
+    background: #f9f9f9 !important;
+    border-radius: 5px !important;
+    margin-top: 20px !important;
+}
+
+.empty-state i {
+    font-size: 4rem !important;
+    color: #ddd !important;
+}
+
+.empty-state h3 {
+    color: #999 !important;
+    margin-top: 10px !important;
+}
+
+.empty-state p {
+    color: #999 !important;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    to {
+        opacity: 1;
+        max-height: 1000px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Print & Responsive */
+@media print {
+    .unscheduled-warning,
+    .button-actions,
+    .view-toggle,
+    .tombol {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .unscheduled-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .button-actions {
+        flex-direction: column !important;
+    }
+
+    .button-actions .tombol {
+        width: 100% !important;
+    }
+}
